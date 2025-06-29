@@ -1,191 +1,210 @@
-/* Grundlayout */
+/* Grundlegende Stile für den gesamten Body */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #eaf2fb;
-    color: #2c3e50;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #e6f0ff; /* Heller Blauton */
+    color: #003366; /* Dunkelblauer Text */
 }
 
-/* Logo und Hauptüberschrift */
-header {
+/* Hauptüberschrift */
+h1 {
+    color: #004080; /* Dunkleres Blau */
     text-align: center;
     margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
 }
 
-header img {
-    width: 120px;
-    max-width: 80%;
-}
-
-h1 {
-    font-size: 2rem;
-    margin-top: 10px;
-    color: #004b93;
-}
-
-/* Unterüberschriften */
+/* Überschrift für Gruppen */
 h2 {
-    color: #0066cc;
+    color: #0066cc; /* Mittelblau */
     margin-top: 30px;
-    font-size: 1.5rem;
-    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
-/* Formular */
+/* Formular-Stile */
 form {
     background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 75, 147, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 75, 147, 0.15);
     padding: 20px;
     margin: 20px auto;
-    max-width: 680px; /* Breiter */
-    width: 90%;
+    max-width: 800px; /* Breiteres Formular */
+    width: 95%;
+    box-sizing: border-box;
 }
 
 /* Eingabefelder */
 input[type="number"],
 input[type="text"],
-input[type="file"],
-select {
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #cccccc;
+select,
+input[type="file"] {
+    padding: 12px 10px;
+    border: 1.5px solid #3399ff;
     border-radius: 6px;
     width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #003366;
+    transition: border-color 0.3s ease;
     box-sizing: border-box;
-    font-size: 1rem;
 }
 
-/* Button */
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus,
+input[type="file"]:focus {
+    outline: none;
+    border-color: #0059b3;
+    background-color: #e6f0ff;
+}
+
+/* Button-Stile */
 button {
-    background-color: #007acc;
+    background-color: #0073e6;
     color: white;
     border: none;
-    padding: 12px 18px;
-    font-size: 1rem;
+    padding: 12px 25px;
     border-radius: 6px;
     cursor: pointer;
-    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
     transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 button:hover {
-    background-color: #005fa3;
+    background-color: #005bb5;
 }
 
-/* Diagramm */
+/* Chart-Stile */
 canvas {
     display: block;
-    max-width: 80%; /* Schmaler */
+    max-width: 75%; /* Schmaleres Diagramm */
     height: auto;
-    margin: 20px auto;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.25);
+    background-color: #ffffff;
 }
 
-/* Tabellen */
+/* Tabelle für Gruppeneinträge */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 25px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 75, 147, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #3399ff;
 }
 
 th {
-    background-color: #007acc;
+    background-color: #0073e6;
     color: white;
     padding: 12px;
-    text-align: center;
     font-weight: 600;
+    text-align: center;
 }
 
 td {
-    padding: 10px;
+    padding: 12px;
     text-align: center;
-    border-top: 1px solid #ddd;
+    font-size: 15px;
+    color: #003366;
 }
 
-td img {
+img.thumbnail {
     width: 50px;
     height: auto;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-/* Modal */
+img.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+/* Modal-Stile bleiben unverändert (falls nötig, kannst du sie noch blau einfärben) */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 10;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 51, 102, 0.9); /* Dunkleres Blau halbtransparent */
 }
 
 .modal-content {
-    margin: auto;
+    margin: 60px auto;
     display: block;
-    width: 90%;
+    width: 80%;
     max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 75, 147, 0.5);
 }
 
 .close {
     position: absolute;
-    top: 20px;
-    right: 35px;
+    top: 15px;
+    right: 30px;
     color: white;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
 }
 
-.close:hover {
-    color: #ccc;
+.close:hover,
+.close:focus {
+    color: #99c2ff;
+    text-decoration: none;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
+@media (max-width: 900px) {
     form {
-        padding: 15px;
+        max-width: 600px;
+    }
+    table {
+        max-width: 600px;
+    }
+    canvas {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    form {
         max-width: 100%;
         width: 100%;
+        padding: 15px;
     }
-
     input[type="number"],
     input[type="text"],
+    select,
     input[type="file"],
-    select {
-        font-size: 0.95rem;
-        padding: 10px;
-    }
-
     button {
-        font-size: 1rem;
-        padding: 12px;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 12px;
+        font-size: 16px;
     }
-
-    th, td {
-        font-size: 0.95rem;
-        padding: 8px;
-    }
-
-    .close {
-        font-size: 30px;
-        right: 20px;
+    canvas {
+        max-width: 100%;
     }
 }
