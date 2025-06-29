@@ -39,8 +39,8 @@ form {
     box-shadow: 0 4px 10px rgba(0, 75, 147, 0.1);
     padding: 20px;
     margin: 20px auto;
-    max-width: 600px; /* etwas breiter */
-    width: 90%; /* flexibel */
+    max-width: 680px; /* Breiter */
+    width: 90%;
 }
 
 /* Eingabefelder */
@@ -77,7 +77,7 @@ button:hover {
 /* Diagramm */
 canvas {
     display: block;
-    max-width: 90%; /* schmaler als vorher */
+    max-width: 80%; /* Schmaler */
     height: auto;
     margin: 20px auto;
 }
