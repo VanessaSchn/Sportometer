@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sportometer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/a2d9e38bd5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="tgh-logo-web.png" alt="TGH Logo" class="logo" />
+        <h1>Sportometer</h1>
+    </header>
+
+    <h2><i class="fas fa-users"></i> Gruppe 1</h2>
+    <form id="group1-form">
+        <select id="group1-activity" required>
+            <option value="">Sportart wählen</option>
+            <option value="1">Lauf bis 5 km – 1 Punkt</option>
+            <option value="2">Lauf 5–10 km – 2 Punkte</option>
+            <option value="3">Lauf ab 10 km – 3 Punkte</option>
+            <option value="1">Anderer Sport – 1 Punkt</option>
+        </select>
+        <input type="file" id="group1-image" accept="image/*" required />
+        <input type="text" id="group1-name" placeholder="Name" required />
+        <button type="submit"><i class="fas fa-plus-circle"></i> Hinzufügen</button>
+    </form>
+
+    <h2><i class="fas fa-users"></i> Gruppe 2</h2>
+    <form id="group2-form">
+        <select id="group2-activity" required>
+            <option value="">Sportart wählen</option>
+            <option value="1">Lauf bis 5 km – 1 Punkt</option>
+            <option value="2">Lauf 5–10 km – 2 Punkte</option>
+            <option value="3">Lauf ab 10 km – 3 Punkte</option>
+            <option value="1">Anderer Sport – 1 Punkt</option>
+        </select>
+        <input type="file" id="group2-image" accept="image/*" required />
+        <input type="text" id="group2-name" placeholder="Name" required />
+        <button type="submit"><i class="fas fa-plus-circle"></i> Hinzufügen</button>
+    </form>
+
+    <canvas id="kmChart" width="400" height="200"></canvas>
+
+    <h2><i class="fas fa-list"></i> Einträge Gruppe 1</h2>
+    <table id="group1-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Punkte</th>
+                <th>Bild</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2><i class="fas fa-list"></i> Einträge Gruppe 2</h2>
+    <table id="group2-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Punkte</th>
+                <th>Bild</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Bild-Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Bild">
+    </div>
+</body>
+</html>
