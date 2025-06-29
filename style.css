@@ -6,19 +6,27 @@ body {
     color: #003366; /* Dunkles Blau für Text */
 }
 
-/* Logo oben zentrieren */
+/* Logo und Titel in einer Zeile */
 header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 25px;
+}
+
+/* Logo klein neben Titel */
+header img {
+    height: 40px;
+    width: auto;
 }
 
 /* Hauptüberschrift */
 h1 {
     color: #0059b3; /* Kräftiges Blau */
-    text-align: center;
-    margin-bottom: 20px;
     font-weight: 700;
     letter-spacing: 1.2px;
+    margin: 0;
 }
 
 /* Überschrift für Gruppen */
@@ -41,10 +49,27 @@ form {
     margin-right: auto;
 }
 
-/* Einheitliche Breite für alle Inputs und Select */
+/* Einheitliche Breite für alle Inputs und Datei-Auswahl */
 input[type="number"],
 input[type="text"],
-input[type="file"],
+input[type="file"] {
+    padding: 12px 10px;
+    border: 1.5px solid #3399ff;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #003366;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent; /* Transparent, damit Hintergrund des Formulars durchscheint */
+}
+
+/* Weißer Hintergrund nur für Sportart-Auswahl */
 select {
     padding: 12px 10px;
     border: 1.5px solid #3399ff;
@@ -59,9 +84,10 @@ select {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    background-color: white; /* Weißer Hintergrund */
 }
 
-/* Hover und Fokus für Inputs */
+/* Hover und Fokus für Inputs und Select */
 input[type="number"]:focus,
 input[type="text"]:focus,
 input[type="file"]:focus,
@@ -200,5 +226,14 @@ td img:hover {
 
     canvas {
         max-width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    header img {
+        height: 30px;
     }
 }
