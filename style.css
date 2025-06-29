@@ -27,7 +27,7 @@ header h1 {
     color: #004b93;
 }
 
-/* Unterüberschriften */
+/* Überschriften */
 h2 {
     color: #0066cc;
     margin-top: 30px;
@@ -40,13 +40,13 @@ form {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 75, 147, 0.1);
-    padding: 20px;
+    padding: 25px;
     margin: 20px auto;
-    max-width: 500px;
-    width: 90%;
+    max-width: 900px; /* breiter */
+    width: 95%;
 }
 
-/* Eingabefelder allgemein */
+/* Eingabefelder */
 input[type="text"],
 input[type="number"],
 input[type="file"],
@@ -55,18 +55,19 @@ select {
     margin-bottom: 15px;
     border: 1px solid #cccccc;
     border-radius: 6px;
-    width: 100%;
     box-sizing: border-box;
     font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
 }
 
-/* Spezifisch: Name und Datei kleiner */
+/* Spezifisch: Name und Datei etwas schmaler */
 input[name="name"],
 input[type="file"] {
-    max-width: 220px;
+    max-width: 250px;
 }
 
-/* Select-Feld hat weiße Hintergrundfarbe */
+/* Select-Feld Hintergrund */
 select {
     background-color: white;
 }
@@ -91,8 +92,8 @@ button:hover {
 /* Diagramm */
 canvas {
     display: block;
-    max-width: 90%;
-    height: auto;
+    max-width: 500px;  /* kleiner als vorher */
+    width: 90%;
     margin: 30px auto;
     background-color: #ffffff;
     border-radius: 10px;
