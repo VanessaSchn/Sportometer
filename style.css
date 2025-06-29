@@ -7,29 +7,27 @@ body {
     color: #2c3e50;
 }
 
-/* Header mit Logo + Überschrift nebeneinander */
+/* Logo und Überschrift */
 header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 header img {
-    height: 50px;
-    width: auto;
+    width: 50px;
+    height: auto;
 }
 
-/* Hauptüberschrift */
-h1 {
+header h1 {
     font-size: 2rem;
-    color: #004b93;
     margin: 0;
+    color: #004b93;
 }
 
-/* Sekundärüberschrift */
+/* Unterüberschriften */
 h2 {
     color: #0066cc;
     margin-top: 30px;
@@ -37,35 +35,40 @@ h2 {
     text-align: center;
 }
 
-/* Formular */
+/* Formularbox */
 form {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 75, 147, 0.1);
     padding: 20px;
     margin: 20px auto;
-    max-width: 550px;
-    width: 95%;
+    max-width: 500px;
+    width: 90%;
 }
 
-/* Eingabefelder */
-input[type="number"],
+/* Eingabefelder allgemein */
 input[type="text"],
+input[type="number"],
 input[type="file"],
 select {
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #b3cce6;
+    border: 1px solid #cccccc;
     border-radius: 6px;
     width: 100%;
     box-sizing: border-box;
     font-size: 1rem;
-    background-color: #fdfdfd;
 }
 
-/* Dropdown soll weißen Hintergrund behalten */
+/* Spezifisch: Name und Datei kleiner */
+input[name="name"],
+input[type="file"] {
+    max-width: 220px;
+}
+
+/* Select-Feld hat weiße Hintergrundfarbe */
 select {
-    background-color: #ffffff;
+    background-color: white;
 }
 
 /* Button */
@@ -88,12 +91,12 @@ button:hover {
 /* Diagramm */
 canvas {
     display: block;
-    max-width: 80%;
+    max-width: 90%;
     height: auto;
     margin: 30px auto;
     background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 75, 147, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Tabellen */
@@ -103,8 +106,6 @@ table {
     margin-top: 20px;
     background-color: #ffffff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-    overflow: hidden;
 }
 
 th {
@@ -163,7 +164,7 @@ td img {
     color: #ccc;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 600px) {
     body {
         padding: 10px;
@@ -171,12 +172,15 @@ td img {
 
     header {
         flex-direction: column;
-        gap: 10px;
+        gap: 6px;
     }
 
-    h1 {
+    header img {
+        width: 40px;
+    }
+
+    header h1 {
         font-size: 1.5rem;
-        text-align: center;
     }
 
     h2 {
@@ -187,18 +191,21 @@ td img {
         padding: 15px;
     }
 
+    input,
+    select,
     button {
         font-size: 1rem;
-        padding: 12px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    canvas {
+        max-width: 100%;
     }
 
     th, td {
         font-size: 0.9rem;
         padding: 8px;
-    }
-
-    canvas {
-        max-width: 100%;
     }
 
     .close {
