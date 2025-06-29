@@ -17,7 +17,7 @@ header {
 }
 
 header img {
-    width: 50px;
+    width: 45px;
     height: auto;
 }
 
@@ -38,11 +38,11 @@ h2 {
 /* Formularbox */
 form {
     background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 75, 147, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 75, 147, 0.12);
     padding: 25px;
     margin: 20px auto;
-    max-width: 900px; /* breiter */
+    max-width: 1000px; /* noch breiter */
     width: 95%;
 }
 
@@ -61,13 +61,13 @@ select {
     max-width: 100%;
 }
 
-/* Spezifisch: Name und Datei etwas schmaler */
+/* Name und Datei-Auswahl etwas kompakter */
 input[name="name"],
 input[type="file"] {
-    max-width: 250px;
+    max-width: 220px;
 }
 
-/* Select-Feld Hintergrund */
+/* Select-Feld */
 select {
     background-color: white;
 }
@@ -92,7 +92,7 @@ button:hover {
 /* Diagramm */
 canvas {
     display: block;
-    max-width: 500px;  /* kleiner als vorher */
+    max-width: 400px;  /* noch kleiner */
     width: 90%;
     margin: 30px auto;
     background-color: #ffffff;
