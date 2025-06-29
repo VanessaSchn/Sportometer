@@ -1,180 +1,145 @@
-/* Grundlayout */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f8fc;
+    color: #2c3e50;
     margin: 0;
     padding: 20px;
-    background-color: #eaf2fb;
-    color: #2c3e50;
 }
 
-/* Logo oben */
 header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
     margin-bottom: 20px;
 }
 
-header img {
-    width: 120px;
-    max-width: 80%;
+.logo {
+    height: 60px;
 }
 
 h1 {
-    font-size: 2rem;
-    margin-top: 10px;
-    color: #004b93;
+    color: #1e73be;
+    font-size: 2.5rem;
+    margin: 0;
 }
 
-/* Überschriften */
 h2 {
-    color: #0066cc;
-    margin-top: 30px;
-    font-size: 1.5rem;
-    text-align: center;
+    color: #3498db;
+    margin-top: 40px;
+    font-size: 1.6rem;
 }
 
-/* Formular */
 form {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 75, 147, 0.1);
+    background: white;
     padding: 20px;
-    margin: 20px auto;
-    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Eingabefelder */
-input[type="number"],
 input[type="text"],
 input[type="file"],
 select {
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #cccccc;
-    border-radius: 6px;
     width: 100%;
-    box-sizing: border-box;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     font-size: 1rem;
+    background-color: #fdfdfd;
 }
 
-/* Button */
 button {
-    background-color: #007acc;
+    background-color: #1e73be;
     color: white;
-    border: none;
     padding: 12px 18px;
     font-size: 1rem;
-    border-radius: 6px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #005fa3;
+    background-color: #155a96;
 }
 
-/* Diagramm */
 canvas {
     display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+    margin: 40px auto;
+    max-width: 700px;
 }
 
-/* Tabellen */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 th {
-    background-color: #007acc;
+    background-color: #3498db;
     color: white;
-    padding: 12px;
-    text-align: center;
+    padding: 14px;
     font-weight: 600;
 }
 
 td {
-    padding: 10px;
+    padding: 12px;
     text-align: center;
-    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
 }
 
-td img {
-    width: 50px;
-    height: auto;
-    border-radius: 4px;
+td img.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #1e73be;
     cursor: pointer;
 }
 
-/* Modal */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-content {
-    margin: auto;
-    display: block;
-    width: 90%;
-    max-width: 700px;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
 .close {
     position: absolute;
     top: 20px;
-    right: 35px;
-    color: white;
+    right: 30px;
     font-size: 40px;
-    font-weight: bold;
+    color: white;
     cursor: pointer;
 }
 
-.close:hover {
-    color: #ccc;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
+@media (max-width: 768px) {
     h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    form {
-        padding: 15px;
-    }
-
-    button {
-        font-size: 1rem;
-        padding: 12px;
-    }
-
-    th, td {
-        font-size: 0.95rem;
-        padding: 8px;
-    }
-
-    .close {
-        font-size: 30px;
-        right: 20px;
+    table {
+        font-size: 0.9rem;
     }
 }
